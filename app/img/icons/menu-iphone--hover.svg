@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="41px" viewBox="0 0 35 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>C2481780-F14C-46E1-AF71-B0E6B77CB741</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#7CBDED" offset="0%"></stop>
+            <stop stop-color="#4688D6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-50.000000, -141.000000)">
+        <path d="M72,142 L68,142 C66.8954305,142 66,142.895431 66,144 L66,179 C66,180.104569 66.8954305,181 68,181 L82,181 C83.1045695,181 84,180.104569 84,179 L84,144 C84,142.895431 83.1045695,142 82,142 L76,142 L72,142 L70,142 L70,143 C70,143.552285 70.4477153,144 71,144 L79,144 C79.5522847,144 80,143.552285 80,143 L80,142 L76,142 L76,143 L72,143 L72,142 Z M68,141 L82,141 C83.6568542,141 85,142.343146 85,144 L85,179 C85,180.656854 83.6568542,182 82,182 L68,182 C66.3431458,182 65,180.656854 65,179 L65,144 C65,142.343146 66.3431458,141 68,141 Z M77,142 L77,143 L78,143 L78,142 L77,142 Z M64,151 L51,151 L51,178 L64,178 L64,180.5 L65,182 L53,182 C51.3431458,182 50,180.656854 50,179 L50,150 C50,148.343146 51.3431458,147 53,147 L64,147 L64,151 Z M58,179 L58,181 L60,181 L60,179 L58,179 Z M57,149 L57,150 L61,150 L61,149 L57,149 Z" id="iPhones-Copy" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

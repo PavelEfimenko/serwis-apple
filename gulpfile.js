@@ -47,10 +47,10 @@ gulp.task('rsync', function() {
 	return gulp.src('app/**')
 	.pipe(rsync({
 		root: 'app/',
-		hostname: 'username@yousite.com',
-		destination: 'yousite/public_html/',
+		hostname: 'webeps.ftp.tools',
+		destination: 'azimex.com.pl/serwis/',
 		// include: ['*.htaccess'], // Includes files to deploy
-		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
+		exclude: ['**/Thumbs.db', '**/*.DS_Store', '/sass', '/node_modules', '.bowerrc', '.gitignore', 'gulpfile.js', 'package-lock.json', 'readme.md', 'package.json'], // Excludes files from deploy
 		recursive: true,
 		archive: true,
 		silent: false,

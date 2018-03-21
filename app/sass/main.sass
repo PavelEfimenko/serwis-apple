@@ -10,6 +10,7 @@
 	background-color: $accent
 	color: #fff
 
+
 html, body
 	height: 100%
 
@@ -17,9 +18,23 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
-	font-family: $default-font
+	line-height: 1
+	font-family: 'Rubik', sans-serif
+	font-weight: 400
 	overflow-x: hidden
+	//-webkit-font-smoothing: subpixel-antialiased
+
+
+ol, ul, dl
+	padding: 0
+	margin: 0
+
+li
+	list-style: none
+
+a, a:hover, a:focus, a:active, a:visited, a:focus-within
+	color: inherit
+	text-decoration: none
 
 input, textarea
 	border: #666 1px solid
@@ -38,6 +53,229 @@ input, textarea
 
 .text-center
 	text-align: center
+
+.top-header
+	position: relative
+	z-index: 2
+	height: 70px
+	background-color: #fff
+	box-shadow: 0 0 50px 0 rgba(0,0,0,0.06)
+
+	.row
+		height: 70px
+
+.top-header-inner
+	height: 70px
+
+.bottom-header
+	height: 70px
+	background-color: #fff
+	box-shadow: 0 0 50px 0 rgba(0,0,0,0.04)
+
+.top-menu
+	font-size: 0
+	display: inline-block
+
+	li
+		font-size: 16px
+		font-weight: 400
+		display: inline-block
+		margin-right: 30px
+		transition: color .2s ease-in-out
+
+		&:last-child
+			margin-right: 0
+
+		&:hover
+			color: $accent
+
+.header-phone
+	display: inline-block
+	padding: 8px 25px
+	margin-left: 55px
+	border: 1px solid #ccc
+	border-radius: 50px
+	font-family: "Barlow Condensed", sans-serif
+	font-size: 20px
+	font-weight: 500
+	text-align: center
+	transition: all .2s ease-in-out
+
+	span
+		display: block
+		position: relative
+		top: 1px
+
+
+	&:hover
+		color: $accent
+		border-color: $accent
+
+
+.bottom-menu
+	//height: 70px
+
+.bottom-menu__main-item
+	display: block
+	font-size: 0
+	line-height: 70px
+	padding: 0 18px
+	position: relative
+
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 16px
+		font-weight: 500
+		transition: color .2s ease-in-out
+
+	&:before
+		content: ''
+		height: 100%
+		width: 1px
+		position: absolute
+		left: 0
+		top: 0
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%)
+		opacity: 0.1
+
+	&:hover
+		span
+			color: $accent
+
+		.icon-iphone
+			background: url(../img/icons/menu-iphone--hover.svg)
+
+		.icon-macbook
+			background: url(../img/icons/menu-macbook--hover.svg)
+
+
+.bottom-menu__item--last
+	&:after
+		content: ''
+		height: 100%
+		width: 1px
+		position: absolute
+		right: 0
+		top: 0
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000000 100%)
+		opacity: 0.1
+
+
+
+.bottom-menu__item-icon
+	display: inline-block
+	vertical-align: middle
+	margin-right: 18px
+
+.bottom-menu__dropdown
+	display: none
+
+
+.icon-iphone
+	width: 35px
+	height: 41px
+	background: url(../img/icons/menu-iphone.svg) center center no-repeat
+	transition: background .2s ease-in-out
+
+.icon-macbook
+	width: 58px
+	height: 32px
+	background: url(../img/icons/menu-macbook.svg) center center no-repeat
+	transition: background .2s ease-in-out
+
+
+
+
+.hero
+	position: relative
+	height: 100vh
+	min-height: 650px
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+
+.hero-content
+	position: relative
+	top: calc(50% - 70px)
+	left: 50%
+	transform: translate(-50%, -50%)
+	text-align: center
+
+	h1
+		font-size: 60px
+		font-weight: 700
+		margin-bottom: 70px
+		letter-spacing: 1px
+		
+
+
+
+
+.btn
+	position: relative
+	display: inline-block
+	border-radius: 50px
+	color: #fff
+	font-size: 17px
+	font-weight: 500
+	outline: 0
+	border: none
+	user-select: none
+	white-space: nowrap
+    vertical-align: middle
+	letter-spacing: 0.7px
+
+	box-shadow: 0 10px 40px -10px rgba(76,153,230,0.85)
+
+	background: #7cbded
+	background: -moz-linear-gradient(45deg, #7cbded 0%, #4688d6 100%)
+	background: -webkit-linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
+	background: linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbded', endColorstr='#4688d6',GradientType=1 )
+	z-index: 2
+
+	transition: box-shadow .5s ease
+
+	
+
+	&:before
+		content: ''
+		position: absolute	
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		border-radius: 50px
+		opacity: 0
+		z-index: -2
+		transition: opacity .5s ease
+
+		background: #4688d6
+		background: -moz-linear-gradient(45deg, #4688d6 0%, #7cbded 100%)
+		background: -webkit-linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
+		background: linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4688d6', endColorstr='#7cbded',GradientType=1 )
+
+		-webkit-transform: translate3d(0,0,0)
+		filter: blur(0)
+
+
+	&:hover
+		color: #fff
+		box-shadow: 0 5px 15px -5px rgba(76,153,230,0.5)
+
+		&:before
+			opacity: 1
+
+	&:visited
+		color: #fff
+
+.btn--xl
+	padding: 21px 50px
+
+
+
 
 
 @import "media" // Always at the end
