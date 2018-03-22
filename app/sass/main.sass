@@ -19,7 +19,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1
-	font-family: 'Rubik', sans-serif
+	font-family: $font-1
 	font-weight: 400
 	overflow-x: hidden
 	//-webkit-font-smoothing: subpixel-antialiased
@@ -27,6 +27,12 @@ body
 
 ol, ul, dl
 	padding: 0
+	margin: 0
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+p
 	margin: 0
 
 li
@@ -77,8 +83,8 @@ input, textarea
 	display: inline-block
 
 	li
-		font-size: 16px
-		font-weight: 400
+		font-size: 15px
+		font-weight: 300
 		display: inline-block
 		margin-right: 30px
 		transition: color .2s ease-in-out
@@ -92,7 +98,7 @@ input, textarea
 .header-phone
 	display: inline-block
 	padding: 8px 25px
-	margin-left: 55px
+	margin-left: 115px
 	border: 1px solid #ccc
 	border-radius: 50px
 	font-family: "Barlow Condensed", sans-serif
@@ -119,14 +125,14 @@ input, textarea
 	display: block
 	font-size: 0
 	line-height: 70px
-	padding: 0 18px
+	padding: 0 20px
 	position: relative
 
 	span
 		display: inline-block
 		vertical-align: middle
-		font-size: 16px
-		font-weight: 500
+		font-size: 15px
+		font-weight: 400
 		transition: color .2s ease-in-out
 
 	&:before
@@ -166,7 +172,7 @@ input, textarea
 .bottom-menu__item-icon
 	display: inline-block
 	vertical-align: middle
-	margin-right: 18px
+	margin-right: 20px
 
 .bottom-menu__dropdown
 	display: none
@@ -203,16 +209,19 @@ input, textarea
 	text-align: center
 
 	h1
-		font-size: 60px
+		//font-family: "Barlow Condensed", sans-serif
+		font-size: 58px
 		font-weight: 700
+		line-height: 80px
 		margin-bottom: 70px
-		letter-spacing: 1px
+		//letter-spacing: 1px
 		
 
 
 
 
 .btn
+	//font-family: "Barlow Condensed", sans-serif
 	position: relative
 	display: inline-block
 	border-radius: 50px
@@ -224,55 +233,212 @@ input, textarea
 	user-select: none
 	white-space: nowrap
     vertical-align: middle
-	letter-spacing: 0.7px
+	letter-spacing: 0.5px
 
 	box-shadow: 0 10px 40px -10px rgba(76,153,230,0.85)
 
-	background: #7cbded
-	background: -moz-linear-gradient(45deg, #7cbded 0%, #4688d6 100%)
-	background: -webkit-linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
-	background: linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbded', endColorstr='#4688d6',GradientType=1 )
+	background-color: $accent
+	//background: -moz-linear-gradient(45deg, #7cbded 0%, #4688d6 100%)
+	//background: -webkit-linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
+	//background: linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbded', endColorstr='#4688d6',GradientType=1 )
 	z-index: 2
 
-	transition: box-shadow .5s ease
+	transition: all .5s ease
 
 	
 
 	&:before
-		content: ''
-		position: absolute	
-		left: 0
-		top: 0
-		width: 100%
-		height: 100%
-		border-radius: 50px
-		opacity: 0
-		z-index: -2
-		transition: opacity .5s ease
+		//content: ''
+		//position: absolute	
+		//left: 0
+		//top: 0
+		//width: 100%
+		//height: 100%
+		//border-radius: 50px
+		//opacity: 0
+		//z-index: -2
+		//transition: opacity .5s ease
 
-		background: #4688d6
-		background: -moz-linear-gradient(45deg, #4688d6 0%, #7cbded 100%)
-		background: -webkit-linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
-		background: linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4688d6', endColorstr='#7cbded',GradientType=1 )
+		//background-color: $accent
+		//background: -moz-linear-gradient(45deg, #4688d6 0%, #7cbded 100%)
+		//background: -webkit-linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
+		//background: linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4688d6', endColorstr='#7cbded',GradientType=1 )
 
-		-webkit-transform: translate3d(0,0,0)
-		filter: blur(0)
+		//-webkit-transform: translate3d(0,0,0)
 
 
 	&:hover
 		color: #fff
 		box-shadow: 0 5px 15px -5px rgba(76,153,230,0.5)
+		background-color: $gradient-1
 
-		&:before
-			opacity: 1
 
 	&:visited
 		color: #fff
 
 .btn--xl
-	padding: 21px 50px
+	padding: 22px 55px
+
+.btn-arrow
+	display: inline-block
+	height: 16px
+	width: 8px
+	background: url(../img/icons/btn-arrow.svg) center center no-repeat
+	vertical-align: top
+	margin-left: 7px
+
+.link-arrow
+    display: inline-block
+    height: 16px
+    width: 8px
+    background: url(../img/icons/link-arrow.svg) center center no-repeat
+    vertical-align: -3px
+    margin-left: 2px
+
+
+.advantages-item
+	text-align: center
+
+.advantages-item__image
+	margin-bottom: 35px
+
+.advantages-item__headline
+	font-family: "Barlow Condensed", sans-serif
+	font-size: 25px
+	font-weight: 700
+	margin-bottom: 20px
+	text-transform: uppercase
+	letter-spacing: 2px
+
+.advantages-item__text
+	font-size: 17px
+	font-weight: 300
+	line-height: 24px
+
+
+
+.section-feedback
+	background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.03) 100%)
+
+.section__headline
+	margin-bottom: 120px
+
+.feedback-item
+	position: relative
+	padding: 30px
+	padding-top: 70px
+	text-align: center
+	background-color: #fff
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05)
+	margin-bottom: 30px
+
+.feedback-item__client-image
+	position: absolute
+	left: 50%
+	top: -40px
+	transform: translate(-50%)
+	background-color: #ccc
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3)
+
+.feedback-item__client-name
+	font-family: "Barlow Condensed", sans-serif
+	font-size: 24px
+	font-weight: 700
+	letter-spacing: 1px
+	margin-bottom: 15px
+
+
+.feedback-item__client-text
+	font-size: 16px
+	font-weight: 300
+	line-height: 22px
+
+
+
+
+
+.news-item
+	background-color: #fff
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05)
+	margin-bottom: 30px
+
+.news-item__image-wrapper
+
+.news-item__image
+	width: 100%
+	height: 155px
+	object-fit: cover
+
+.news-item__content
+	padding: 30px
+	position: relative
+
+.news-item__content-header
+	@include clearfix
+	margin-bottom: 20px
+
+.news-item__category
+	font-family: $font-2
+	display: inline-block
+	float: left
+	color: $accent
+	text-transform: uppercase
+	font-size: 18px
+	line-height: 18px
+	font-weight: 700
+
+.news-item__date
+	display: inline-block
+	float: right
+	font-weight: 300
+	font-size: 14px
+	line-height: 18px
+
+.news-item__headline
+	font-family: $font-2
+	font-size: 24px
+	font-weight: 700
+	letter-spacing: 1px
+	margin-bottom: 20px
+
+
+.news-item__text
+	font-size: 16px
+	font-weight: 300
+	line-height: 24px
+	height: 70px
+	overflow: hidden
+
+.news-item__link
+	position: absolute
+	right: 30px
+	bottom: 30px
+	background-color: #fff
+	line-height: 21px
+	font-weight: 300
+	color: $accent !important
+
+	&:before
+		content: "..."
+		position: absolute
+		left: -20px
+		bottom: 0
+		background-color: #fff
+		height: 100%
+		width: 20px
+		font-weight: 300
+		color: $font
+
+
+
+
+
+
 
 
 
