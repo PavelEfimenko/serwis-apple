@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="12px" viewBox="0 0 6 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-719.000000, -3806.000000)" stroke-linecap="square">
+        <g id="news" transform="translate(0.000000, 3111.000000)" stroke="#4688D6">
+            <g id="feed" transform="translate(365.000000, 367.000000)">
+                <g id="item-copy-2" transform="translate(40.000000, 0.000000)">
+                    <g id="more" transform="translate(216.000000, 324.000000)">
+                        <polyline id="Line" transform="translate(101.000000, 10.000000) rotate(-90.000000) translate(-101.000000, -10.000000) " points="95 8 101 12 107 8"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
