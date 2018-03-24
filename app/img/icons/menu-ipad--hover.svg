@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="40px" viewBox="0 0 28 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>E4E5200D-70B8-48C3-A571-295438217877</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#7CBDED" offset="0%"></stop>
+            <stop stop-color="#4688D6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="UI-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-135.000000, -141.000000)">
+        <path d="M137,141 L161,141 C162.104569,141 163,141.895431 163,143 L163,179 C163,180.104569 162.104569,181 161,181 L137,181 C135.895431,181 135,180.104569 135,179 L135,143 C135,141.895431 135.895431,141 137,141 Z M137,145 L137,177 L161,177 L161,145 L137,145 Z M148,178 L148,180 L150,180 L150,178 L148,178 Z M149,144 C149.552285,144 150,143.552285 150,143 C150,142.447715 149.552285,142 149,142 C148.447715,142 148,142.447715 148,143 C148,143.552285 148.447715,144 149,144 Z" id="iPad-2" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -122,7 +122,6 @@ input, textarea
 		border-color: $accent
 
 .bottom-menu
-	//height: 70px
 	position: relative
 
 	.col-3
@@ -132,7 +131,7 @@ input, textarea
 	display: block
 	font-size: 0
 	line-height: 70px
-	padding: 0 30px
+	padding: 0 25px
 	position: relative
 
 	span
@@ -159,19 +158,15 @@ input, textarea
 		.icon-iphone
 			background: url(../img/icons/menu-iphone--hover.svg)
 
+		.icon-ipad
+			background: url(../img/icons/menu-ipad--hover.svg)
+
 		.icon-macbook
 			background: url(../img/icons/menu-macbook--hover.svg)
 
-// .bottom-menu__main-item:hover + .bottom-menu__dropdown
-// 	//display: block
-// 	opacity: 1
-// 	visibility: visible
-// 	transform: translate(-50%, 0)
+		.icon-all
+			background: url(../img/icons/menu-all--hover.svg)
 
-// .bottom-menu__dropdown:hover
-// 	opacity: 1
-// 	visibility: visible
-// 	transform: translate(-50%, 0)
 
 .bottom-menu__item--last
 	&:after
@@ -187,10 +182,10 @@ input, textarea
 .bottom-menu__item-icon
 	display: inline-block
 	vertical-align: middle
-	margin-right: 30px
+	margin-right: 25px
+	transition: background 0.2s ease-in-out
 
 .bottom-menu__dropdown
-	//display: none
 	position: absolute
 	top: 70px
 	left: 50%
@@ -283,12 +278,14 @@ input, textarea
 
 
 .dropdown__item--headline
+	font-size: 14px
 	background-color: #e2e2e2
 	color: #000
-	font-weight: 700
+	font-weight: 500
 	padding: 20px 30px
 	cursor: default
-	opacity: .3
+	opacity: .35
+	
 
 
 
@@ -297,13 +294,27 @@ input, textarea
 	width: 35px
 	height: 41px
 	background: url(../img/icons/menu-iphone.svg) center center no-repeat
-	transition: background 0.2s ease-in-out
+
+.icon-ipad
+	width: 28px
+	height: 40px
+	background: url(../img/icons/menu-ipad.svg) center center no-repeat
 
 .icon-macbook
 	width: 58px
 	height: 32px
 	background: url(../img/icons/menu-macbook.svg) center center no-repeat
-	transition: background 0.2s ease-in-out
+
+.icon-all
+	width: 65px
+	height: 40px
+	background: url(../img/icons/menu-all.svg) center center no-repeat
+
+
+
+
+
+
 
 .hero
 	position: relative
@@ -320,63 +331,67 @@ input, textarea
 	transform: translate(-50%, -50%)
 	text-align: center
 
-	h1
-		//font-family: "Barlow Condensed", sans-serif
-		font-size: 58px
-		font-weight: 700
-		line-height: 80px
-		margin-bottom: 70px
+.hero__headline
+	font-family: "Barlow Condensed", sans-serif
+	font-size: 74px
+	font-weight: 700
+	line-height: 80px
+	margin-bottom: 70px
+	letter-spacing: 2px
 
-		//letter-spacing: 1px
+	span
+		letter-spacing: -10px
+
 
 .btn
-	//font-family: "Barlow Condensed", sans-serif
+	font-family: "Barlow Condensed", sans-serif
 	position: relative
 	display: inline-block
+	background-color: $accent
 	border-radius: 50px
+
 	color: #fff
-	font-size: 17px
+	font-size: 19px
 	font-weight: 500
+	letter-spacing: 0.6px
+	text-decoration: none
+
 	outline: 0
 	border: none
 	user-select: none
 	white-space: nowrap
-	vertical-align: middle
-	letter-spacing: 0.5px
-	box-shadow: 0 10px 40px -10px rgba(76, 153, 230, 0.85)
-	background-color: $accent
 
-	//background: -moz-linear-gradient(45deg, #7cbded 0%, #4688d6 100%)
-	//background: -webkit-linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
-	//background: linear-gradient(45deg, #7cbded 0%,#4688d6 100%)
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbded', endColorstr='#4688d6',GradientType=1 )
-	z-index: 2
-	transition: all 0.5s ease
+	 -webkit-backface-visibility: hidden
+	 z-index: 1
 
-	&:before
-		//content: ''
-		//position: absolute
-		//left: 0
-		//top: 0
-		//width: 100%
-		//height: 100%
-		//border-radius: 50px
-		//opacity: 0
-		//z-index: -2
-		//transition: opacity .5s ease
+	
+	transition: box-shadow .2s linear
 
-		//background-color: $accent
-		//background: -moz-linear-gradient(45deg, #4688d6 0%, #7cbded 100%)
-		//background: -webkit-linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
-		//background: linear-gradient(45deg, #4688d6 0%,#7cbded 100%)
-		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4688d6', endColorstr='#7cbded',GradientType=1 )
+	span
+		position: relative
+		top: 1px
+		z-index: 3
 
-		//-webkit-transform: translate3d(0,0,0)
+	&:after
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 50px
+		background-image: linear-gradient(225deg, #7CBDED 0%, #4688D6 100%)
+		transition: opacity .2s linear
+		z-index: 2
+		opacity: 0
+
 
 	&:hover
 		color: #fff
-		box-shadow: 0 5px 15px -5px rgba(76, 153, 230, 0.5)
-		background-color: $gradient-1
+		box-shadow: 0 10px 40px -10px rgba(76,153,230,0.85)
+
+		&:after
+			opacity: 1
 
 	&:visited
 		color: #fff
@@ -555,6 +570,181 @@ input, textarea
 		font-weight: 300
 		color: $font
 		pointer-events: none
+
+
+
+
+
+
+
+.apple-choiser
+	
+
+.apple-choiser__lvl-1
+	background-color: #ededed
+	box-shadow: 0 20px 50px 0 rgba(0,0,0,0.1)
+
+.choiser__main-item
+	cursor: pointer
+	
+	&.item-1
+		.choiser__main-item_link
+			&:before
+				display: none
+
+	&:hover, &.current
+
+		.choiser__main-item_link
+			color: $accent
+
+			.arrow-down-small
+				background-image: url(../img/icons/arrow-small--hover.svg)
+
+
+.choiser__main-item_link
+	display: block
+	text-align: center
+	font-size: 15px
+	padding: 22px 20px
+	position: relative
+	background-color: #fff
+	transition: color .1s linear
+
+	.arrow-down-small
+		display: block
+		position: absolute
+		left: 50%
+		bottom: 10px
+		width: 24px
+		height: 10px
+		background: url(../img/icons/arrow-small.svg) center center no-repeat
+		transform: translateX(-50%)
+		transition: background .1s linear
+
+	&:before
+		content: ""
+		height: 100%
+		width: 1px
+		position: absolute
+		left: 0
+		top: 0
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+		opacity: 0.1
+
+
+
+.apple-choiser__lvl-2
+	position: relative
+	//background-color: #fff
+	box-shadow: 0 20px 50px 0 rgba(0,0,0,0.1)
+	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+	
+
+	&.disable
+		//display: none
+		visibility: hidden
+		opacity: 0
+		height: 0
+		transform: translateY(10px)
+
+
+	&.active
+		//display: block
+		visibility: visible
+		opacity: 1
+		height: auto
+		transform: translateY(0)
+
+.choiser__list-row
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 1px
+		background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+
+	&.row
+		position: relative
+
+.choiser__list-item
+	text-align: center
+	transition: color .1s linear
+
+	a
+		display: block
+		font-size: 14px
+		padding: 20px 30px
+		width: 100%
+		height: 100%
+		transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+		//background-color: #fff
+
+		&:hover
+			color: $accent
+			box-shadow: 0 10px 40px rgba(0,0,0,0.1)
+
+
+	.arrow-down-small
+		display: block
+		position: absolute
+		left: 50%
+		bottom: 10px
+		width: 24px
+		height: 10px
+		background: url(../img/icons/arrow-small--hover.svg) center center no-repeat
+		transform: translateX(-50%)
+		transition: all .1s linear
+		opacity: 0
+
+
+	&:hover
+		color: $accent
+
+		.arrow-down-small
+			opacity: 1
+
+
+.choiser__list-item--headline
+	font-size: 14px
+	background-color: #e2e2e2
+	color: #000
+	font-weight: 500
+	padding: 20px 30px
+	cursor: default
+	opacity: .35
+
+
+
+.choiser__list
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: auto
+	visibility: hidden
+	opacity: 0
+	transition: all .3s linear
+	background-color: #fff
+
+
+	&.active
+		visibility: visible
+		opacity: 1
+		//height: auto
+
+
+
+
+
+
+
+
+
+
 
 
 
