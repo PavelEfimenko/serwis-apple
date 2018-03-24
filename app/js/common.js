@@ -8,7 +8,7 @@ $(function() {
 
 		$(this).next('.bottom-menu__dropdown').addClass('active');
 
-		$('.bottom-menu__dropdown.active').mouseleave(function() {
+		$('.bottom-menu__dropdown.active, .bottom-menu__main-item').mouseleave(function() {
 			$(this).removeClass('active'); 
 		});
 	});
